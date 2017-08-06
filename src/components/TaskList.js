@@ -6,7 +6,13 @@ class TaskList extends Component {
   render() {
     return (
       <div>
-        <Task />
+        {this.props.tasks.map((item, key) => {
+          console.log(item);
+          return (
+            <Task key={key} task={item}/>
+            
+          )
+        })}
       </div>
     );
   }

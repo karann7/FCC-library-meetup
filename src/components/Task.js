@@ -5,7 +5,7 @@ class Task extends Component {
   render() {
     return (
       <div>
-      <h3> Inside Task</h3>
+      {this.props.task.taskName} <span><input type='checkbox'></input></span>
       </div>
     );
   }

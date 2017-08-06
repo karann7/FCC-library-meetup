@@ -10,8 +10,13 @@ class App extends Component {
     this. completeTask = this. completeTask.bind(this);
     this.removeTask = this.removeTask.bind(this);
   }
-  addTask() {
-
+  addTask(task) {
+    let obj = {};
+    obj.taskName = task;
+    obj.complete = false;
+    this.setState({
+      tasks: this.state.Tasks.concat(obj)
+    });
   }
   completeTask() {
 
@@ -23,7 +28,7 @@ class App extends Component {
     return (
       <div>
       <InputField addTask={this.addTask}/>
-      <TaskList />
+      <TaskList tasks={this.state.tasks}/>
       </div>
     );
   }
