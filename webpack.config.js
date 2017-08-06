@@ -19,7 +19,9 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-      
+      InputField: 'src/InputField.js',
+      TaskList: 'src/TaskList.js',
+      Task: 'src/Task.js'
     },
     extensions: ['', '.js', '.jsx']
   },
